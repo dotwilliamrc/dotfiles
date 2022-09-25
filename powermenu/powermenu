@@ -1,0 +1,5 @@
+#!/bin/bash
+
+rofi -show p -modi p:~/.local/bin/rofi-power-menu -font "Fira Code 16" -theme-str 'window {width: 20%;} listview {lines: 6;}'
+
+exit

@@ -1,0 +1,54 @@
+#BSPWM
+rm -rf ~/.config/bspwm
+
+ln -srv bspwm ~/.config/
+
+#sxhkd
+rm -rf ~/.config/sxhkd
+
+ln -srv sxhkd ~/.config/
+
+#polybar
+rm -rf ~/.config/polybar
+
+ln -srv polybar ~/.config/
+
+#Picom
+rm -rf ~/.config/picom
+
+ln -srv picom ~/.config/
+
+#NeoVim
+rm -rf ~/.config/nvim
+
+ln -srv nvim ~/.config/
+
+#xprofile
+rm -rf ~/.xprofile
+
+ln -srv ./start/.xprofile ~/
+
+#zsh
+rm -rf ~/.zshrc
+
+ln -srv ./zsh/.zshrc ~/
+
+#kitty
+rm -rf ~/.config/kitty
+
+ln -srv kitty ~/.config/
+
+#rofi
+rm -rf ~/.config/rofi
+
+ln -srv rofi ~/.config/
+
+#power-menu
+rm -rf ~/.local/bin/rofi-power-menu
+
+ln -srv ./powermenu/rofi-power-menu ~/.local/bin/
+
+rm -rf ~/.local/bin/powermenu
+
+
+ln -srv ./powermenu/powermenu ~/.local/bin/
