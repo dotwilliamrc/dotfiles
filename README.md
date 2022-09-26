@@ -155,3 +155,23 @@ Activar el display manager:
 sudo systemctl enable lightdm.service
 sudo systemctl start lightdm.service
 ```
+
+# Comandos
+Para generar tema utilizar:
+```
+wal-dark [backend] [Dirección de la imagen]
+```
+
+Para ver los backends:
+```
+wal --backend
+```
+
+# Capturas
+![Captura 1](https://github.com/dotwilliamrc/dotfiles/blob/main/captures/c1.png)
+
+![Captura 2](https://github.com/dotwilliamrc/dotfiles/blob/main/captures/c2.png)
+
+![Captura 3](https://github.com/dotwilliamrc/dotfiles/blob/main/captures/c3.png)
+
+![Captura 4](https://github.com/dotwilliamrc/dotfiles/blob/main/captures/c4.png)
