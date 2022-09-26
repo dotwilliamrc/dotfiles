@@ -1,14 +1,4 @@
-# Preinstalacion
-## Teclado
-Para convertir a dvorak programmer en la sesion actual usar:
-```zsh
-setxkbmap -layout us,es -model pc105 -variant dvp,dvorak -option "grp:alt_space_toggle, caps:escape_shifted_capslock"
-```
-
-Para convertir a dvorak programmer de manera persistente:
-```zsh
-localectl set-x11-keymap us,es pc105 dvp,dvorak "grp:alt_space_toggle, caps:escape_shifted_capslock"
-```
+# Pre-instalación
 
 ## Dependencias
 ### Generales
@@ -31,9 +21,9 @@ sudo pacman -S bspwm sxhkd rofi polybar
 sudo pacman -S firefox firefox-developer-edition pcmanfm screenkey kitty
 ```
 
-# Instalacion
+# Instalación
 ## Pulseaudio
-Si no quiere funcionar correr
+Si no quiere funcionar correr:
 ```zsh
 pulseaudio --check
 pulseauido -D
@@ -51,19 +41,19 @@ chsh -s /bin/zsh
 ```
 
 ### Oh-My-Zsh
-Clonamos el repositorio
+Clonamos el repositorio de [Oh-My-Zsh](https://github.com/ohmyzsh/ohmyzsh)
 ```zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-Agregamos el highlighting y el autosuggestion
+Agregamos el [highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) y el [autosuggestion](https://github.com/zsh-users/zsh-autosuggestions)
 ```zsh
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ```
 
-### Power level  10k
-Instalamos lo necesario
+### Power Level  10k
+Instalamos lo necesario para [Powel Level 10k](https://github.com/romkatv/powerlevel10k)
 ```zsh
 sudo pacman -S powerline-common awesome-terminal-fonts 
 paru -S zsh-theme-powerlevel10k-git ttf-meslo-nerd-font-powerlevel10k
@@ -76,18 +66,18 @@ p10k configure
 ```
 
 ## Pywal
-Instalacion de pywal:
+Instalación de [pywal](https://github.com/dylanaraps/pywal):
 ```zsh
 sudo pacman -S python-pywal python-pip python2 go
 ```
 
-Instalacion de backends
+Instalación de backends
 ```zsh
 pip3 install colorthief colorz schemer haishoku
 go install github.com/thefryscorer/schemer2@latest
 ```
 
-Instalacion de slick-pywal
+Instalación de [slick-pywal](https://github.com/Paul-Houser/slickgreeter-pywal)
 ```zsh
 git clone https://github.com/Paul-Houser/slickgreeter-pywal
 cd slickgreeter-pywal
@@ -96,7 +86,7 @@ sudo sh install.sh
 ```
 
 ## Kitty
-Instalacion de fuentes
+Instalación de fuentes
 ```zsh
 paru -S nerd-fonts-fira-code
 ```
@@ -107,7 +97,7 @@ Dependencias
 sudo pacman -S inkscape optipng xfconf
 ```
 
-Descargamos el tema
+Descargamos el tema [warnai](https://github.com/reorr/warnai)
 ```zsh
 git clone https://github.com/reorr/warnai ~/.themes/download/warnai
 ```
@@ -118,7 +108,7 @@ Dependencias
 sudo pacman -S zenity
 ```
 
-Descargamos los iconos
+Descargamos los iconos [Clarity](https://github.com/jcubic/Clarity)
 ```zsh
 git clone https://github.com/jcubic/Clarity ~/.icons/Clarity
 ```
@@ -131,16 +121,26 @@ paru -S ttf-material-icons-git ttf-font-logos
 ```
 
 ## Picom
-Para las animaciones de las ventanas usare el siguiente fork de picom
 ```zsh
 paru -S picom-pijulius-git
 ```
 
 ## Archivos de configuracion
-Dentro de la carpeta '.dotfiles' correr `./install`
+Dentro de la carpeta `.dotfiles` correr `./install`
+
+## Dvorak programmer en español
+Para convertir a dvorak programmer en la sesión actual usar:
+```zsh
+setxkbmap -layout esp -model pc105 -variant dvp -option "caps:escape_shifted_capslock, lv3:lalt_switch lv3:ralt_alt"
+```
+
+Para convertir a dvorak programmer de manera persistente:
+```zsh
+set-x11-keymap esp pc105 dvp "caps:escape_shifted_capslock, lv3:lalt_switch, lv3:ralt_alt"
+```
 
 ## Slick Greeter
-Agregar slick greeter en el archivo de configuracion de lightdm:
+Agregar slick greeter en el archivo de configuración de lightdm:
 ```zsh
 /etc/lightdm/lightdm.conf
 ---

@@ -50,5 +50,9 @@ ln -srv ./powermenu/rofi-power-menu ~/.local/bin/
 
 rm -rf ~/.local/bin/powermenu
 
-
 ln -srv ./powermenu/powermenu ~/.local/bin/
+
+#teclado
+sudo rm -rf /usr/share/X11/xkb/symbols/esp
+
+sudo cp -rv ./keymap/esp /usr/share/X11/xkb/symbols/
